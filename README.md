@@ -69,3 +69,50 @@ python中查看import模块的路径
 	__xx: 双前置下划线,避免和子类中的属性命名冲突,无法在外部直接访问
 	__xx__: 双前后下划线,用户名字空间的魔法对象或属性.如__init__,(不要自己发明这样的名字)
 	xx_:单后置下划线,用于避免和python关键字的冲突(不建议这样使用)
+
+## 迭代
+
+使用迭代目的是为了是内存占用较少
+
+比如有如下例子
+
+	a = [11, 22, 33, 44]
+	b = iter(a)
+	next(b)
+
+列表a占用内存肯定比迭代器b要多,所以使用迭代器能在需求要的时候获取相应的数据,且少消耗内存
+
+### 判断是否可以迭代
+
+可以直接用于for循环的数据类型即是可迭代
+
+可以使用内建的函数来判断
+
+	from collections import Iterable
+
+	isinstance([], Iterable)
+	isinstance("abc", Iterable)
+	isinstance({}, Iterable)
+	isinstance((), Iterable)
+
+### 迭代器(Iterator)
+
+可以被next()函数调用并不断返回下一个值的对象即位迭代器
+
+可以使用内建的函数来判断是否是迭代器
+
+	from collections import Iterator
+
+	isinstance((x for x in range(10)), Iterator)
+	isinstance([], Iterator)
+	isinstance("abc", Iterator)
+	isinstance({}, Iterator)
+	isinstance((), Iterator)
+
+### iter函数
+
+使用iter函数创建迭代器
+
+	a = [11, 22, 33, 44]
+	b = iter(a)
+	next(b)
