@@ -15,6 +15,9 @@ def test(number):
         print(number + 99)
 
     pdi()
+
+    # 这样放回函数调用结果不合适
+    # 应该返回函数"指针"closure
     return closure()
 
 test(100)
