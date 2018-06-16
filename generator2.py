@@ -18,4 +18,4 @@ def fabonacci(n):
         yield b
         pdi()
         a, b = b, a + b
-    pid()
+    pdi()
