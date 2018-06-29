@@ -10,7 +10,7 @@ def get_file_size(filename):
 
 def main(argv):
     # the result value
-    output = []
+    results = []
 
     # argv[1:] specify the path need to be statistic
     pathes = argv[1:]
@@ -23,15 +23,17 @@ def main(argv):
                 # absolute file name
                 afn = os.path.abspath(os.path.join(dirpath, f))
 
-                # printout format
+                # record format
                 record = (
                     get_file_size(afn),
                     os.path.join(dirpath, f))
 
-                # add to output
-                output.append(record)
+                # add record to results
+                results.append(record)
 
-    for record in output:
+    # sort the results
+    results.sort()
+    for record in results:
         print "%12d %s" % record
 
 '''
