@@ -1,0 +1,7 @@
+fs_type=ext4
+system_size=1073741824
+userdata_fs_type=ext4
+userdata_size=12654215168
+extfs_sparse_flag=-s
+#selinux_fc=out/target/product/abcd/root/file_contexts
+skip_fsck=true
