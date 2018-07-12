@@ -1,5 +1,5 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-def sayHello():
+def sayHello(info):
     print 'say hello.....'

@@ -22,7 +22,7 @@ class TestCls():
         if self.module is None or not hasattr(self.module, function_name):
             return kwargs.get("default", None)
 
-        return getattr(self.module, function_name)()
+        return getattr(self.module, function_name)(*((self,) + args), **kwargs)
 
     def SayHello(self):
         return self._DoCall("sayHello")
