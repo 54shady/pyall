@@ -1,5 +1,5 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-def main():
+def say_goodbye():
     print 'say goodbye.....'
