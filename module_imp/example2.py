@@ -14,6 +14,7 @@ class TestCls():
 
         if self.module is None:
             # 通过加载模块来初始化类方法
+            # 将模块中的方法变为类方法
             info = imp.find_module('say_hello', ['./localmodule/'])
             self.module = imp.load_module("hello", *info)
             print(dir(self.module))
@@ -27,6 +28,9 @@ class TestCls():
     def SayHello(self):
         return self._DoCall("sayHello")
 
+    def SayHelloTo(self, name):
+        return self._DoCall("sayHelloTo", name)
+
 def main():
     tObj = TestCls(key1 = "value1",
                 key2 = "value2",
@@ -38,6 +42,7 @@ def main():
 
     #print dir(tObj)
     tObj.SayHello()
+    tObj.SayHelloTo("python")
 
 if __name__ == '__main__':
     main()
