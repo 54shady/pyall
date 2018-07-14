@@ -9,17 +9,18 @@ NUMBER=3
 
 def start_routine(index):
     for i in range(4):
-        print('routine...pid(%d), index(%d)' % (os.getpid(), index))
+        print('routine loop[%d] pid(%d), task(%d)' % (i, os.getpid(), index))
         time.sleep(1)
 
 # 创建一个NUMBER个进程的进程池
 po = Pool(NUMBER)
 
 for i in range(10):
+    print 'push task %d to Pool' % i
     # 使用元组的方式给子进程传参数
     po.apply_async(start_routine, (i,))
 
-print('-----start----')
+print('stop push task to poll...')
 # 关闭进程池
 po.close()
 
