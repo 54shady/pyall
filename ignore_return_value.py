@@ -4,8 +4,11 @@
 temp_list = [(1, 2), (3, 4), (5, 6)]
 
 # 函数放回多个返回值
+
+
 def foo():
     return 1, 2
+
 
 def main():
     a, b = foo()
@@ -37,6 +40,7 @@ def main():
     print '-' * 30
     for (x, _) in temp_list:
         print x
+
 
 if __name__ == '__main__':
     main()

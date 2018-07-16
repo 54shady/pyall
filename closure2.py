@@ -4,11 +4,14 @@
 # 闭包的应用
 
 # 描述y = ax + b这个函数(直线)
+
+
 def line_config(a, b):
     def line(x):
-        return a * x + b;
+        return a * x + b
 
     return line
+
 
 # 两条直线
 line1 = line_config(1, 1)

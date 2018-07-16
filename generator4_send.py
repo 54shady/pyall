@@ -4,6 +4,7 @@
 # import local debug info module
 from print_debug_info import pdi
 
+
 def test():
     i = 0
     while i < 10:
@@ -11,8 +12,9 @@ def test():
         # 当使用send后,传入的参数会替换给temp赋值语句中等号右边的所有部分
         temp = yield i
         print 'temp value = %s' % temp
-        #print(type(temp))
+        # print(type(temp))
         i += 1
+
 
 tObject = test()
 

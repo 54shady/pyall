@@ -14,7 +14,9 @@ print "python_getopt -s <arg>"
 ====================================
 '''
 
-import getopt, sys
+import getopt
+import sys
+
 
 def main(argv):
     def show_usage(docstring):
@@ -36,7 +38,7 @@ def main(argv):
     # 他们之间是否关联看下面循环里如何处理而已
     try:
         opts, args = getopt.getopt(sys.argv[1:], "hvp:s:", ["help", "verbose",
-            "path=", "longopt_no_args"])
+                                                            "path=", "longopt_no_args"])
     except getopt.GetoptError as err:
         print str(err)  # will print something like "option -a not recognized"
         show_usage(__doc__)
@@ -44,8 +46,8 @@ def main(argv):
 
     for o, a in opts:
         if o in ("-h", "--help"):
-          show_usage(__doc__)
-          sys.exit()
+            show_usage(__doc__)
+            sys.exit()
         elif o in ("-v", "--verbose"):
             print 'verbose enable'
         elif o in ("-p", "--path"):
@@ -56,6 +58,7 @@ def main(argv):
             print 's option is ==> %s' % a
         else:
             print 'default'
+
 
 if __name__ == "__main__":
     main(sys.argv)

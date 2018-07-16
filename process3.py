@@ -7,15 +7,19 @@
 from multiprocessing import Process
 import time
 
-# 自定义process类
-# 1. 继承Process
-# 2. 实现run方法
+
 class myProcess(Process):
-    # 一定要实现run方法
+    """
+    自定义process类
+     1. 继承Process
+     2. 实现run方法
+    """
+
     def run(self):
         while True:
             print('my process run...')
             time.sleep(1)
+
 
 p = myProcess()
 p.start()

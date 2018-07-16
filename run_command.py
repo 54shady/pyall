@@ -4,9 +4,12 @@
 import subprocess
 
 # 定义一个用于描述选项的类
+
+
 class Options():
     def __init__(self):
         self.verbose = False
+
 
 def run_command(args, **kwargs):
     """Create and return a subprocess.Popen object, printing the command
@@ -16,6 +19,7 @@ def run_command(args, **kwargs):
 
     return subprocess.Popen(args, **kwargs)
 
+
 def main():
     cmd = ['ls', '-la']
     p = run_command(cmd)
@@ -23,8 +27,9 @@ def main():
     # p = run_command(cmd, stdout = subprocess.PIPE)
     # p.communicate()
 
+
 if __name__ == '__main__':
     # 全局的OPTIONS
     OPTIONS = Options()
-    #OPTIONS.verbose = True # debug command
+    # OPTIONS.verbose = True # debug command
     main()

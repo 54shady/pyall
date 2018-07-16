@@ -2,22 +2,29 @@
 # coding=utf-8
 
 # format concatenate string
+
+
 def myStringCat(value):
     v = 'value = %d'
-    v %= value # concatenate value to the original string
+    v %= value  # concatenate value to the original string
     return v
 
 # not that elegant version
+
+
 def myStringCatV1(value):
     v = 'value = '
     v += str(value)
     return v
 
 # format long concatenato version
+
+
 def StringCateL(x, y, z):
     value_template = ("%d %d %d")
     real_value = value_template % (x, y, z)
     return real_value
+
 
 if __name__ == '__main__':
     print 'input 1 number'

@@ -21,4 +21,4 @@ g = fabonacci(5)
 # 使用for循环来调用生成器
 for n in g:
     # print(type(n)) 这里的n是个int不是generator
-    print(n) # 不是next(n), next(iterator)
+    print(n)  # 不是next(n), next(iterator)

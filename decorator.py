@@ -1,23 +1,27 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-# 先定义一个闭包
+
 def wrapper(func):
+    # 先定义一个闭包
     def closure():
         print('Accessable checking...')
         func()
 
     return closure
 
-# 假设要在每次调用function1前做一个权限检查
-# 假设是打印一下Accessable checking
+
 def function1():
+    # 假设要在每次调用function1前做一个权限检查
+    # 假设是打印一下Accessable checking
     print('calling function1')
 
-# python中的装饰器,在函数外面@装饰器
+
 @wrapper
 def function2():
+    # python中的装饰器,在函数外面@装饰器
     print('calling function2')
+
 
 # step 1 使用一个新变量接收闭包里的函数指针(closure)
 function_point = wrapper(function1)

@@ -4,13 +4,14 @@
 import imp
 import sys
 
+
 class TestCls():
     module = None
 
     def __init__(self, **kwargs):
         # 批量初始化类属性
         for k, v in kwargs.iteritems():
-          setattr(self, k, v)
+            setattr(self, k, v)
 
         if self.module is None:
             # 通过加载模块来初始化类方法
@@ -31,10 +32,11 @@ class TestCls():
     def SayHelloTo(self, name):
         return self._DoCall("sayHelloTo", name)
 
+
 def main():
-    tObj = TestCls(key1 = "value1",
-                key2 = "value2",
-                key3 = "value3")
+    tObj = TestCls(key1="value1",
+                   key2="value2",
+                   key3="value3")
 
     print tObj.key1
     print tObj.key2
@@ -43,6 +45,7 @@ def main():
     #print dir(tObj)
     tObj.SayHello()
     tObj.SayHelloTo("python")
+
 
 if __name__ == '__main__':
     main()

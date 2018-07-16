@@ -2,11 +2,15 @@
 # coding=utf-8
 
 from multiprocessing import Process, Queue
-import os, time, random
+import os
+import time
+import random
 
 # 使用队列来实现进程间通信
 
 # 不断向队列中写消息
+
+
 def write(q):
     for value in ['A', 'B', 'C']:
         print 'put %s to queue...' % value
@@ -14,18 +18,21 @@ def write(q):
         time.sleep(random.random())
 
 # 不断读取队列中消息,直到队列中无消息
+
+
 def read(q):
     while True:
         if not q.empty():
-            v = q.get(True) # 等价于q.get_nowait()非阻塞
+            v = q.get(True)  # 等价于q.get_nowait()非阻塞
             print 'get %s from queue' % v
             time.sleep(random.random())
         else:
             break
 
+
 if __name__ == '__main__':
     # 父进程创建消息队列,并传给子进程
-    q = Queue() # 该消队列无限大
+    q = Queue()  # 该消队列无限大
     pw = Process(target=write, args=(q,))
     pr = Process(target=read, args=(q,))
 

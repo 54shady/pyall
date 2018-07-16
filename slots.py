@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-# 限制类属性必须是slots里规定的属性
+
 class Person(object):
+    # 限制类属性必须是slots里规定的属性
     __slots__ = ("name", "age")
+
 
 pObject = Person()
 pObject.name = 'anonymouse'

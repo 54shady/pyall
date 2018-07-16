@@ -2,10 +2,11 @@
 # coding=utf-8
 
 # value1 can be access by 'from private import *'
-value1=100
+value1 = 100
 
 # _value2 can not be access by 'from private import *'
-_value2=200
+_value2 = 200
+
 
 class Person():
     def __init__(self):
@@ -18,6 +19,7 @@ class Person():
     def set_age(self, n):
         print 'set %s age to %s' % (self.__name, n)
         self.__age = n
+
 
 p = Person()
 

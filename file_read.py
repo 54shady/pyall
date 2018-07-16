@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+
 def main():
     # version v1
     # read : read all in a str
@@ -34,6 +35,7 @@ def main():
     with open('/etc/fstab') as f:
         d = f.read().rstrip()
         print d
+
 
 if __name__ == '__main__':
     main()

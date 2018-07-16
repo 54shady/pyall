@@ -4,6 +4,7 @@
 # import local debug info module
 from print_debug_info import pdi
 
+
 def test(number):
     pdi()
 
@@ -16,6 +17,7 @@ def test(number):
 
     pdi()
     return closure
+
 
 ret = test(100)
 print('='*20)

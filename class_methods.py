@@ -3,6 +3,7 @@
 
 import time
 
+
 class Person(object):
     '''
     1. 静态方法是类中的函数,不需要实例
@@ -29,6 +30,7 @@ class Person(object):
     def set_name_age(cls, n, a):
         cls.name = n
         cls.age = a
+
 
 if __name__ == '__main__':
     # 类方法和静态方法都可以用类直接调用而不需要使用实例调用

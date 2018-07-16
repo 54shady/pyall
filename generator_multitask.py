@@ -6,15 +6,19 @@
 
 # 只要task1和task2切换足够快
 # 就相当于有两个任务同时运行
+
+
 def task1():
     while True:
         print('task one running---')
         yield None
 
+
 def task2():
     while True:
         print('task two running+++')
         yield None
+
 
 t1 = task1()
 t2 = task2()
@@ -22,5 +26,5 @@ t2 = task2()
 # main loop
 while True:
     # __next__ python3 feature
-    next(t1) # t1.__next__()
-    next(t2) # t2.__next__()
+    next(t1)  # t1.__next__()
+    next(t2)  # t2.__next__()

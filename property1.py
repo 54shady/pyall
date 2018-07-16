@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+
 class Person():
     def __init__(self):
         self.__age = 9
@@ -17,6 +18,7 @@ class Person():
     def person_age(self, n):
         print('set age')
         self.__age = n
+
 
 p = Person()
 

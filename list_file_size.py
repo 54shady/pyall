@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import operator, os, sys
+import operator
+import os
+import sys
 
-# get the file size
+
 def get_file_size(filename):
-  st = os.lstat(filename)
-  return st.st_size;
+    """ get the file size """
+    st = os.lstat(filename)
+    return st.st_size
+
 
 def main(argv):
     # the result value
@@ -36,9 +40,10 @@ def main(argv):
     for record in results:
         print "%12d %s" % record
 
+
 '''
 Description : statistic the file size under given directory
 Usage : python list_file_size.py /statistic/path1 /statistic/path2
 '''
 if __name__ == '__main__':
-  main(sys.argv)
+    main(sys.argv)

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+
 def main():
     print 'raw input>'
     # input will always be string type
@@ -15,6 +16,7 @@ def main():
     # str : 'string' "string"
     s2 = input()
     print type(s2)
+
 
 if __name__ == '__main__':
     main()

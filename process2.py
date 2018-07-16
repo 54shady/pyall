@@ -7,12 +7,14 @@
 from multiprocessing import Process
 import time
 
-NUMBER=5
+NUMBER = 5
+
 
 def start_routine():
     while True:
         print('routine...')
         time.sleep(1)
+
 
 p = Process(target=start_routine)
 p.start()

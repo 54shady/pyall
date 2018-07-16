@@ -4,6 +4,8 @@
 import sys
 
 """ Load 'key=value' pairs from filename """
+
+
 def parse_kv_file(filename):
     record = {}
     f = open(filename)
@@ -25,10 +27,12 @@ def parse_kv_file(filename):
 
     return record
 
-""" traversal the dictionary """
+
 def traversal(d):
+    """ traversal the dictionary """
     for k in d:
         print '%s=%s' % (k, d[k])
+
 
 if __name__ == '__main__':
     # parse the KeyValue pair file

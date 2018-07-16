@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+
 class Person():
     def __init__(self):
         self.__age = 9
@@ -12,6 +13,7 @@ class Person():
         self.__age = n
 
     interface_age = property(get_age, set_age)
+
 
 p = Person()
 print 'age is %d' % (p.interface_age)

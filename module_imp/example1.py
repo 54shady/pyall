@@ -4,6 +4,7 @@
 import imp
 import sys
 
+
 def main():
     # find say_hello.py
     info = imp.find_module('say_hello', ['./localmodule/'])
@@ -23,6 +24,7 @@ def main():
     # import say_goodbye as say_goodbye
     mod = imp.load_module("say_goodbye", f, fn, desc)
     print dir(mod)
+
 
 if __name__ == '__main__':
     main()

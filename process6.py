@@ -5,12 +5,14 @@ from multiprocessing import Pool
 import time
 import os
 
-NUMBER=3
+NUMBER = 3
+
 
 def start_routine(index1, index2):
     for i in range(4):
         print('pid(%d), index1(%d) index2(%d)' % (os.getpid(), index1, index2))
         time.sleep(1)
+
 
 # 创建一个NUMBER个进程的进程池
 po = Pool(NUMBER)

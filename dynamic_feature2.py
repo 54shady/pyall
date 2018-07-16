@@ -3,6 +3,7 @@
 
 import types
 
+
 class Person(object):
     def __init__(self, newName, newAge):
         self.name = newName
@@ -21,6 +22,7 @@ class Person(object):
     @classmethod
     def read(cls):
         print 'classmethod, read'
+
 
 if __name__ == '__main__':
     # 使用类的静态方法和类方法都不需要实例

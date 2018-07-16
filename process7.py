@@ -7,12 +7,14 @@
 from multiprocessing import Process
 import time
 
-NUMBER=5
+NUMBER = 5
+
 
 def start_routine(name, index):
     while True:
-        print 'name = %s, index = %d' % (name , index)
+        print 'name = %s, index = %d' % (name, index)
         time.sleep(1)
+
 
 # 传给子进程的参数写在args的元组里
 # 最后一个要留空
