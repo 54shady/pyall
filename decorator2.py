@@ -3,6 +3,8 @@
 
 """ 装饰器装饰的时机 """
 
+import time
+
 
 def makeBold(fn):
     print("wrapping....")
@@ -19,4 +21,5 @@ def function():
 
 
 # 即使还没调用函数function但是python解析器已经装饰好了
+time.sleep(3)
 function()
