@@ -30,10 +30,15 @@ def main():
         "-d", "--dnt", help="count action with default value", action="count", default=3)
 
     # 第二种 : Optional arguments : 可选参数,bool变量(比较常用)
+    # 默认变量是--AAA
+    # 如果有指定dest=AAA的话就是dest指定的变量
     parser.add_argument(
         "-b", "--bbb", help="this is a enable value b", action="store_true")
     parser.add_argument(
         "-e", "--eee", help="this is a enable value e", action="store_false")
+    parser.add_argument(
+        "-f", "--fff", help="this is a enable value e", action="store_true",
+        dest="this")
 
     # 第三种 : Positional arguments : 固定参数(使用的场景相对较少)
     parser.add_argument("pvalue", help="this is an positional value")
@@ -49,6 +54,11 @@ def main():
         print 'disable'
 
     if args.eee:
+        print 'enable'
+    else:
+        print 'disable'
+
+    if args.this:
         print 'enable'
     else:
         print 'disable'
