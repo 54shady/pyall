@@ -17,6 +17,14 @@ class Baz():
 def bar(**kwargs):
     print 'bar is being called'
     traversal(kwargs)
+    print '-' * 30
+    print 'try to get needed values'
+
+    # try to get needed values
+    t = kwargs.get('this', None)
+    print t
+    tt = kwargs.get('that', 911)
+    print tt
 
 
 def foo(var1=None, var2=None, **kwargs):
@@ -35,7 +43,10 @@ def main():
     foo(var1=1, var2=2, new1=3, new2=4)
 
     print '-' * 30
-    foo(var2=22, new1=1, new2=2)
+    foo(var2=22, new1=1, new2=2, this='adfe')
+
+    print '-' * 30
+    foo(var2=22, new1=1, new2=2, that=23)
 
     print '-' * 30
     foo(var1=1, new3=3, new4=4, new5=5)
