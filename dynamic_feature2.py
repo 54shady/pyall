@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import types
-
 
 class Person(object):
     def __init__(self, newName, newAge):

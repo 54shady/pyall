@@ -22,7 +22,7 @@ def run_command(args, **kwargs):
 
 def main():
     cmd = ['ls', '-la']
-    p = run_command(cmd)
+    run_command(cmd)
     # cmd执行结果输出到子进程的pipe里
     # p = run_command(cmd, stdout = subprocess.PIPE)
     # p.communicate()

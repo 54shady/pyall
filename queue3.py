@@ -2,9 +2,6 @@
 # coding=utf-8
 
 from multiprocessing import Manager, Pool
-import os
-import time
-import random
 
 """ 进程池中的进程间使用队列通信 """
 

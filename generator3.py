@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-# import local debug info module
-from print_debug_info import pdi
-from generator2 import *
+from generator2 import fabonacci
 
 # 生成器在for循环中的使用方法, 不需要使用next
 generator1 = (x + 2 for x in range(10))

@@ -2,8 +2,7 @@
 # coding=utf-8
 
 # import local debug info module
-from print_debug_info import pdi
-from generator2 import *
+from generator2 import fabonacci
 
 # 1. 每执行一次next都会卡在yield函数
 # 2. yield会返回后面的数据

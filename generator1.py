@@ -28,7 +28,7 @@ def fabonacci1(n):
         yield b
         pdi()
         a, b = b, a + b
-    pid()
+    pdi()
 
 
 generator1 = fabonacci1(9)

@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-# import local debug info module
-from print_debug_info import pdi
-
 
 def test():
     i = 0

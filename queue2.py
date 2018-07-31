@@ -2,7 +2,6 @@
 # coding=utf-8
 
 from multiprocessing import Process, Queue
-import os
 import time
 import random
 
